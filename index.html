@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPTで生成した歌詞をsuno.aiに食わせる用</title>
+    <script>
+        function convertText() {
+            // 上のテキストエリアの内容を取得
+            var upperTextArea = document.getElementById("upperTextArea");
+            var upperText = upperTextArea.value;
+
+            var convertedText = upperText.replace(/サビ/g, 'Chorus').replace(/ヴァース/g, 'Verse').replace(/イントロ/g, 'Intro').replace(/ブリッジ/g, 'Bridge').replace(/アウトロ/g, 'Outro').replace(/コーラス/g, 'Chorus');
+
+            // 下のテキストエリアに変換結果を表示
+            var lowerTextArea = document.getElementById("lowerTextArea");
+            lowerTextArea.value = convertedText;
+        }
+    </script>
+</head>
+<body>
+    <h1>ChatGPTで生成した歌詞をsuno.aiに食わせる用</h1>
+
+	<p>R&B female-vocal</p>
+
+
+    <!-- 上のテキストエリア -->
+    <textarea id="upperTextArea" style="width: 719px; height: 138px;"placeholder="変換前のテキストを入力"></textarea>
+	<br>
+	<br>
+    <!-- 変換ボタン -->
+    <button onclick="convertText()">変換</button>
+	<br>
+	<br>
+    <!-- 下のテキストエリア -->
+    <textarea id="lowerTextArea" style="width: 719px; height: 138px;"placeholder="変換後のテキストがここに表示されます" readonly></textarea>
+</body>
+</html>
