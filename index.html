@@ -10,7 +10,14 @@
             var upperTextArea = document.getElementById("upperTextArea");
             var upperText = upperTextArea.value;
 
-            var convertedText = upperText.replace(/サビ/g, 'Chorus').replace(/ヴァース/g, 'Verse').replace(/イントロ/g, 'Intro').replace(/ブリッジ/g, 'Bridge').replace(/アウトロ/g, 'Outro').replace(/コーラス/g, 'Chorus');
+            var convertedText = upperText.replace(/サビ/g, 'Chorus')
+		    .replace(/Aメロ/g, 'Verse1')
+		    .replace(/Bメロ/g, 'Verse2')
+		    .replace(/ヴァース/g, 'Verse')
+		    .replace(/イントロ/g, 'Intro')
+		    .replace(/ブリッジ/g, 'Bridge')
+		    .replace(/アウトロ/g, 'Outro')
+		    .replace(/コーラス/g, 'Chorus');
 
             // 下のテキストエリアに変換結果を表示
             var lowerTextArea = document.getElementById("lowerTextArea");
