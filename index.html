@@ -13,11 +13,15 @@
             var convertedText = upperText.replace(/サビ/g, 'Chorus')
 		    .replace(/Aメロ/g, 'Verse1')
 		    .replace(/Bメロ/g, 'Verse2')
+		    .replace(/Cメロ/g, 'Verse3')
+		    .replace(/Dメロ/g, 'Verse4')
 		    .replace(/ヴァース/g, 'Verse')
 		    .replace(/イントロ/g, 'Intro')
 		    .replace(/ブリッジ/g, 'Bridge')
 		    .replace(/アウトロ/g, 'Outro')
 		    .replace(/コーラス/g, 'Chorus');
+		    .replace(/サビ/g, 'Chorus');
+		    .replace(/大サビ/g, 'Chorus');
 
             // 下のテキストエリアに変換結果を表示
             var lowerTextArea = document.getElementById("lowerTextArea");
